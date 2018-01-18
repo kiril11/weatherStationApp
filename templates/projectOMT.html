@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet"  type = "text/css" href="{{url_for('static', filename='OMTproject.css') }}">
+    <title>Weather Stations</title>
+</head>
+
+<body onload="startTime();">
+    <ul id="parent">
+        <li id="sofiaS" onclick="javascript:window.location='http://127.0.0.1:5000/Sofia'">Sofia Station</li>
+        <li id="plovdivS" onclick="javascript:window.location='http://127.0.0.1:5000/Plovdiv'">Plovdiv Station</li>
+        <li id="velingradS" onclick="javascript:window.location='http://127.0.0.1:5000/Velingrad'">Velingrad Station</li>
+    </ul>
+    <div id="clock"></div>
+    <div onmouseout="hideDiv();" id="stationInfo">
+        {% block content %}
+        {% for item in result %}
+        The temperature in {{ item.city}} on {{item.date}} is {{ item.temp }} and the humidity is {{item.hum}} <br>
+        {% endfor %}
+        {% endblock %}
+    </div>
+	<script src="{{url_for('static', filename='projectOMT.js')}}"></script>
+
+</body>
+</html>
