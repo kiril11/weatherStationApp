@@ -3,13 +3,13 @@ WeatherStation
 A simple App displaying the weather of three cities by extracting the data from a database, which is filled by a python script.
 It also stores the information in a log file: tempLog.txt
 
-In order to be able to run the app install the requirements from requirements.txt file and create your own config.py file in the main directory with the following
-structure:
+In order to be able to run the app install the requirements from requirements.txt file and create your own config.py file in the main directory with the following structure:
 city_apis = {
             'api_id_sofia': 'YOUR_CUSTOM_API_FROM_openweathermap.org',
             'api_id_velingrad': 'YOUR_CUSTOM_API_FROM_openweathermap.org',
             'api_id_plovdiv': 'YOUR_CUSTOM_API_FROM_openweathermap.org'
             }
+Request an APPID on http://openweathermap.org/appid and start!
 
 To fill the database with data for the current time run:
 
