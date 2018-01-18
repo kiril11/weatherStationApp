@@ -76,7 +76,7 @@ def createT(date,city,temperature,humidity):
 
 
 def createLog(date,city,temeprature,humidity):
-    f = open('tempLog.txt','a')
+    f = open('tempLog.log','a')
     f.write("In " + str(city) + " on " + str(date) + " the temp is " + str(temeprature) + " with humidity of " +str(humidity) +  "\n" ) 
     f.close()
     
